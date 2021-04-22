@@ -1,0 +1,84 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+body {
+    background-color: rgb(31, 173, 138);
+}
+.container {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50% -50%);
+    width: 590px;
+    height: 340px;
+    box-shadow: 3px 3px 8px #000;
+    border-radius: 20px;
+    padding: 50px;
+    background-color: #2b2727;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.container .title {
+    margin-right: 5rem;
+    color: rgb(31, 173, 138);
+    flex-basis: 40%;
+}
+
+@keyframes pop {
+    to {
+        transform: scale(1.4);
+    }
+}
+
+.container .title::before {
+    content: "";
+    width: 2px;
+    height: 130px;
+    background-color: rgb(31, 173, 138);
+    position: absolute;
+    top: 30%;
+    left: 40px;
+    transition: all 0.8s ease-in-out;
+    animation: pop 1s infinite;
+}
+.container .data {
+    flex-basis: 60%;
+    line-height: 2.5rem;
+    margin-right: -2rem;
+}
+.container .data .input-wrap input {
+    border: none;
+    padding: 10px;
+    background: transparent;
+    border-bottom: 1px solid #ccc;
+    outline: none;
+    color: #fff;
+    /* flex-wrap: nowrap; */
+    font-size: 16px;
+    /* color: #fff; */
+}
+.container .data .input-wrap input::placeholder {
+    color: #555;
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.container .data .input-wrap input.btn {
+    /* width: 100px; */
+    border: none;
+    border-bottom: none;
+    color: rgb(31, 173, 138);
+    font-weight: 800;
+    letter-spacing: 3px;
+    cursor: pointer;
+}
+.container .data .input-wrap #final {
+    font-size: 15px;
+    color: #f9f9f9;
+    font-family: sans-serif;
+    display: block;
+}
