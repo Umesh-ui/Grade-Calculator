@@ -82,3 +82,37 @@ body {
     font-family: sans-serif;
     display: block;
 }
+
+@media (max-width: 480px) {
+    .container {
+        width: 340px;
+        height: 200px;
+        left: 2%;
+        padding: 20px;
+    }
+    .container .title h1 {
+        font-size: 1.5rem;
+        flex-basis: 50%;
+    }
+    .container .title::before {
+        height: 100px;
+        left: 12px;
+    }
+
+    .container .data {
+        flex-basis: 50%;
+        line-height: 1.5rem;
+        /* margin-right: -2rem; */
+    }
+    .container .data .input-wrap input {
+        font-size: 10px;
+        padding: 5px;
+    }
+    .container .data .input-wrap #final {
+        font-size: 8px;
+        color: #f9f9f9;
+        font-family: sans-serif;
+        line-height: 1rem;
+        /* display: block; */
+    }
+}
